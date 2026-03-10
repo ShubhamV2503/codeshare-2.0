@@ -49,3 +49,9 @@ The client will start running on port `3000` (`http://localhost:3000`).
 - **Editor Functionality:** Dropdowns for multiple languages, themes, and instant syntax highlighting.
 - **Read-Only Mode:** Simple toggle switch to freeze code sharing.
 - **Modern Aesthetics:** Vibrant Tailwind gradients with the `lucide-react` icon set.
+
+---
+
+## ⚠️ Disclaimer
+**This repository and its codebase are strictly for personal use by the creator.** 
+It should not be copied, distributed, or used by any other person or organization without explicit permission.
