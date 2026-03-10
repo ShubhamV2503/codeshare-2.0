@@ -3,6 +3,9 @@ import "./globals.css";
 export const metadata = {
     title: "codeshare 2.0 - Online Code Share",
     description: "Share, edit, and collaborate on code in real-time.",
+    verification: {
+        google: process.env.NEXT_PUBLIC_GOOGLE_VERIFICATION || "",
+    },
 };
 
 import Header from "../components/Header";
