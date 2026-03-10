@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #0d1117;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #1f2937;
+  border-radius: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #374151;
+}
+
+/* 
+  Remote Cursor Styling for Monaco Editor 
+  These classes are injected via editor.createDecorationsCollection 
+*/
+.remote-cursor-caret {
+  position: relative !important;
+  display: inline-block !important;
+  width: 2px !important;
+  height: 1.2em !important;
+  vertical-align: middle;
+  background-color: var(--cursor-color, #3b82f6) !important;
+  z-index: 9;
+  pointer-events: none;
+}
+
+/* Dynamically generated classes from React using CSS variables */
+[class*="remote-cursor-caret remote-cursor-"] {
+  background-color: var(--cursor-color, #3b82f6) !important;
+}
+
+/* Use attribute selector to apply the specific CSS variable set in React */
+[class*="remote-cursor-caret remote-cursor-"]::after {
+  content: var(--cursor-name, "User");
+  position: absolute;
+  top: -18px;
+  left: 0;
+  padding: 2px 6px;
+  border-radius: 4px;
+  border-bottom-left-radius: 0;
+  font-size: 10px;
+  font-weight: 600;
+  color: white;
+  white-space: nowrap;
+  pointer-events: none;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  z-index: 10;
+  background-color: var(--cursor-color, #3b82f6);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
